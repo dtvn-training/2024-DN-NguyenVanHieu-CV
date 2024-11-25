@@ -6,6 +6,9 @@
     --text-placeholder-color: #8b8b8b;
     --text-helper-color: #000000;
     --font-main: "Manrope", sans-serif;
+    --font-size-h2-screen-desktop: 20px;
+    --font-size-h2-screen-tablet: 18px;
+    --font-size-h2-screen-phone: 18px;
 }
 
 *{
