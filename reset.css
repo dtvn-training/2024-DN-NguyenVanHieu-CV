@@ -1,0 +1,27 @@
+:root{
+    --background-main-color: #233a5f;
+    --text-title-color: #233a5f;
+    --text-content-color: #edeff2;
+    --text-placeholder-color: #8b8b8b;
+    --font-main: "Manrope", sans-serif;
+    --font-size-h2-screen-desktop: 20px;
+    --font-size-h2-screen-tablet: 18px;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: var(--font-main);
+    font-style: normal;
+}
+
+ul>li{
+    list-style: none;
+}
+
+a{
+    color: var(--text-content-color);
+    transition: color 0.3s ease;
+}
+
