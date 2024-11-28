@@ -61,23 +61,23 @@ body {
   color: var(--text-title-color);
 }
 
-/* skills */
-.skills {
+/* section-left */
+.section-left {
   color: var(--text-content-color);
   margin-top: 2rem;
 }
-.skills > h2 {
+.section-left > h2 {
   font-size: var(--font-size-h2-screen-desktop);
   font-weight: 500;
   margin-bottom: 1rem;
 }
-.skills > ul {
+.section-left > ul {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
   padding-left: 1.5rem;
 }
-.skills > ul > li {
+.section-left > ul > li {
   list-style: circle;
   font-size: 15px;
   font-weight: 300;
@@ -86,14 +86,7 @@ body {
 
 /* honor and award */
 .honor-award {
-  color: var(--text-content-color);
   margin-top: 2rem;
-  width: 100%;
-}
-.honor-award > h2 {
-  font-size: var(--font-size-h2-screen-desktop);
-  font-weight: 500;
-  margin-bottom: 1rem;
 }
 .honor-award > .graduate {
   width: 100%;
@@ -106,7 +99,6 @@ body {
   font-size: 15px;
   font-weight: 300;
 }
-
 .honor-award > .description > p {
   font-size: 13px;
   color: #ffffffdb;
@@ -115,39 +107,12 @@ body {
 
 /* hobbies and interest */
 .hobbies-interest {
-  color: var(--text-content-color);
   margin-top: 2rem;
-  width: 100%;
-}
-.hobbies-interest > h2 {
-  font-size: var(--font-size-h2-screen-desktop);
-  font-weight: 500;
-  margin-bottom: 1rem;
-}
-.hobbies-interest > ul {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-  padding-left: 1.5rem;
-}
-.hobbies-interest > ul > li {
-  list-style: circle;
-  font-size: 15px;
-  font-weight: 300;
 }
 
 /* links and credentials */
-
 .links-credentials {
-  color: var(--text-content-color);
   margin-top: 2rem;
-  width: 100%;
-}
-
-.links-credentials > h2 {
-  font-size: var(--font-size-h2-screen-desktop);
-  font-weight: 500;
-  margin-bottom: 1rem;
 }
 .links-credentials > .social {
   display: flex;
@@ -196,20 +161,21 @@ body {
   background-color: var(--background-main-color);
   border-radius: 10px;
 }
-.circle {
-  width: 14px;
-  height: 14px;
-  margin-top: 3px;
+.item > div:nth-child(2),
+.description > div:nth-child(2) {
   position: relative;
 }
-.circle::after {
+.item > div:nth-child(2)::after,
+.description > div:nth-child(2)::after {
   content: "";
   display: block;
   position: absolute;
-  width: 100%;
-  height: 100%;
+  width: 14px;
+  height: 14px;
   background-color: #e5e5e5;
   border-radius: 50%;
+  left: -7%;
+  top: 0;
 }
 .item > div:nth-child(2) > .content > p:nth-child(1) {
   font-size: 18px;
@@ -231,6 +197,7 @@ body {
   display: grid;
   grid-template-columns: 2fr 8fr;
   margin-bottom: 2rem;
+  gap: 2rem;
 }
 .list-item > .item > .image {
   width: 70px;
@@ -239,22 +206,18 @@ body {
 .list-item > .item > .image > img {
   width: 100%;
 }
-.list-item > .item > div:nth-child(2) {
-  display: grid;
-  grid-template-columns: 6% 94%;
-}
 .item > div:nth-child(2) > .content {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
 }
-
-/* about */
-.about {
+.section-right {
   display: flex;
   flex-direction: column;
   gap: 1rem;
 }
+
+/* about */
 .about > .description > p {
   color: var(--text-placeholder-color);
   font-size: 14px;
@@ -265,23 +228,17 @@ body {
 
 /* education */
 .education {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
   margin-top: 2rem;
 }
 .education > .description {
   margin-top: 0.8rem;
   display: grid;
   grid-template-columns: 2fr 8fr;
+  gap: 2rem;
 }
 .education > .description > .school-year > span {
   font-size: 16px;
   font-weight: 600;
-}
-.education > .description > div:nth-child(2) {
-  display: grid;
-  grid-template-columns: 6% 94%;
 }
 .education > .description > div:nth-child(2) > .content {
   display: flex;
@@ -307,17 +264,11 @@ div:nth-child(2) > .content > p:nth-child(3) {
 
 /* experience */
 .experience {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
   margin-top: 2rem;
 }
 
 /* volunteer experience */
 .volunteer-experience {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
   margin-top: 2rem;
 }
 
@@ -434,88 +385,66 @@ div:nth-child(2) > .content > p:nth-child(3) {
     font-size: 13px;
   }
 
-  .links-credentials > h2,
-  .hobbies-interest > h2,
-  .honor-award > h2,
-  .skills > h2 {
+  .section-left > h2 {
     font-size: var(--font-size-h2-screen-tablet);
   }
-
-  .hobbies-interest > ul > li,
-  .skills > ul > li {
+  .section-left > ul > li {
     font-size: 13px;
     line-height: 18px;
   }
-
   .honor-award > .graduate > span {
     font-size: 13px;
   }
   .honor-award > .description > p {
     font-size: 12px;
   }
-
   .links-credentials > .social > p > a {
     font-size: 12px;
   }
-
   .container-right {
     padding: 1rem 16px;
   }
-
-  .education > .title > h2,
-  .experience > .title > h2,
-  .volunteer-experience > .title > h2,
-  .about > .title > h2 {
+  .section-right > .title > h2 {
     font-size: var(--font-size-h2-screen-tablet);
   }
-  .education > .title > span,
-  .experience > .title > span,
-  .volunteer-experience > .title > span,
-  .about > .title > span {
+  .section-right > .title > span {
     width: 45px;
     height: 3px;
   }
 
+  /*about*/
   .about > .description > p {
     font-size: 12px;
   }
 
-  .education > .description {
-    gap: 10px;
-  }
+  /* education */
   .education > .description > .school-year > span {
-    font-size: 13px;
-  }
-  .education > .description > div:nth-child(2) > .circle {
-    width: 10px;
-    height: 10px;
-  }
-  .education > .description > div:nth-child(2) > .content > p:nth-child(1) {
-    font-size: 15px;
-  }
-  .education > .description > div:nth-child(2) > .content > p:nth-child(2) {
-    font-size: 13px;
-  }
-  .education > .description > div:nth-child(2) > .content > p:nth-child(3) {
-    font-size: 11px;
+    font-size: 12px;
   }
 
+  /* list items */
   .list-item > .item > .image {
     width: 45px;
     height: 45px;
   }
 
-  .list-item > .item > div:nth-child(2) > .circle {
-    width: 10px;
-    height: 10px;
-  }
+  /* education and list item*/
+  .education > .description > div:nth-child(2) > .content > p:nth-child(1),
   .list-item > .item > div:nth-child(2) > .content > p:nth-child(1) {
     font-size: 15px;
   }
+  .education > .description > div:nth-child(2) > .content > p:nth-child(2),
   .list-item > .item > div:nth-child(2) > .content > p:nth-child(2) {
     font-size: 13px;
   }
+  .education > .description > div:nth-child(2) > .content > p:nth-child(3),
   .list-item > .item > div:nth-child(2) > .content > p:nth-child(3) {
     font-size: 11px;
+  }
+  .item > div:nth-child(2)::after,
+  .description > div:nth-child(2)::after {
+    width: 10px;
+    height: 10px;
+    top: 2%;
   }
 }
