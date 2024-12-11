@@ -3,10 +3,12 @@ body {
   align-items: center;
   justify-content: center;
   padding: 1rem 0;
+  font-size: 16px;
 }
 .container {
   width: 55%;
   display: grid;
+  font-size: 15px;
   cursor: default;
   grid-template-columns: 3fr 7fr;
   box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
@@ -55,7 +57,6 @@ body {
   width: 100%;
   background-color: var(--text-content-color);
   padding: 8px 10px;
-  font-size: 15px;
   font-weight: 500;
   border-radius: 5px;
   color: var(--text-title-color);
@@ -64,7 +65,7 @@ body {
 /* section-left */
 .section-left {
   color: var(--text-content-color);
-  margin-top: 2rem;
+  margin-top: 2rem;   
 }
 .section-left > h2 {
   font-size: var(--font-size-h2-screen-desktop);
@@ -79,15 +80,11 @@ body {
 }
 .section-left > ul > li {
   list-style: circle;
-  font-size: 15px;
   font-weight: 300;
   line-height: 25px;
 }
 
 /* honor and award */
-.honor-award {
-  margin-top: 2rem;
-}
 .honor-award > .graduate {
   width: 100%;
   display: flex;
@@ -96,7 +93,6 @@ body {
   margin-bottom: 0.8rem;
 }
 .honor-award > .graduate > span {
-  font-size: 15px;
   font-weight: 300;
 }
 .honor-award > .description > p {
@@ -105,15 +101,7 @@ body {
   line-height: 20px;
 }
 
-/* hobbies and interest */
-.hobbies-interest {
-  margin-top: 2rem;
-}
-
 /* links and credentials */
-.links-credentials {
-  margin-top: 2rem;
-}
 .links-credentials > .social {
   display: flex;
   align-items: center;
@@ -135,7 +123,6 @@ body {
 }
 
 /* container right */
-
 .container-right {
   padding: 2rem 3rem;
 }
@@ -215,6 +202,8 @@ body {
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  margin-top: 2rem;
+  font-size: 16px;
 }
 
 /* about */
@@ -227,9 +216,6 @@ body {
 }
 
 /* education */
-.education {
-  margin-top: 2rem;
-}
 .education > .description {
   margin-top: 0.8rem;
   display: grid;
@@ -237,7 +223,6 @@ body {
   gap: 2rem;
 }
 .education > .description > .school-year > span {
-  font-size: 16px;
   font-weight: 600;
 }
 .education > .description > div:nth-child(2) > .content {
@@ -251,7 +236,6 @@ div:nth-child(2) > .content > p:nth-child(1) {
   line-height: 18px;
 }
 div:nth-child(2) > .content > p:nth-child(2) {
-  font-size: 16px;
   font-weight: 600;
   line-height: 16px;
 }
@@ -260,16 +244,6 @@ div:nth-child(2) > .content > p:nth-child(3) {
   font-weight: 400;
   line-height: 18px;
   color: var(--text-placeholder-color);
-}
-
-/* experience */
-.experience {
-  margin-top: 2rem;
-}
-
-/* volunteer experience */
-.volunteer-experience {
-  margin-top: 2rem;
 }
 
 /* responsive screen */
@@ -385,6 +359,9 @@ div:nth-child(2) > .content > p:nth-child(3) {
     font-size: 13px;
   }
 
+  .section-left{
+    font-size: 12px;
+  }
   .section-left > h2 {
     font-size: var(--font-size-h2-screen-tablet);
   }
@@ -395,14 +372,10 @@ div:nth-child(2) > .content > p:nth-child(3) {
   .honor-award > .graduate > span {
     font-size: 13px;
   }
-  .honor-award > .description > p {
-    font-size: 12px;
-  }
-  .links-credentials > .social > p > a {
-    font-size: 12px;
-  }
+ 
   .container-right {
     padding: 1rem 16px;
+    font-size: 12px;
   }
   .section-right > .title > h2 {
     font-size: var(--font-size-h2-screen-tablet);
@@ -410,16 +383,6 @@ div:nth-child(2) > .content > p:nth-child(3) {
   .section-right > .title > span {
     width: 45px;
     height: 3px;
-  }
-
-  /*about*/
-  .about > .description > p {
-    font-size: 12px;
-  }
-
-  /* education */
-  .education > .description > .school-year > span {
-    font-size: 12px;
   }
 
   /* list items */
